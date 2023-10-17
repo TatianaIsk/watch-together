@@ -1,23 +1,44 @@
 .icon {
-	width: 40px;
+  width: 40px;
   height: 30px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 
-	&.film {
-		background-image: url('./../../../assets/icons/film.svg');
-	}
+  &.film,
+  &.youtube,
+  &.notebook {
+    width: 75px;
+    height: 65px;
+  }
 
-	&.youtube {
-		background-image: url('./../../../assets/icons/youtube.svg');
-	}
+  &.film {
+    background-image: url('./../../../assets/icons/film.svg');
+  }
 
-	&.notebook {
-		background-image: url('./../../../assets/icons/notebook.svg');
-	}
+  &.youtube {
+    background-image: url('./../../../assets/icons/youtube.svg');
+  }
 
-	&.cateye {
-		background-image: url('./../../../assets/icons/icon-button.svg');
-	}
+  &.notebook {
+    background-image: url('./../../../assets/icons/notebook.svg');
+  }
+
+  &.cateye {
+    background-image: url('./../../../assets/icons/icon-button.svg');
+  }
+
+  &.github,
+  &.telegram {
+    width: 40px;
+    height: 40px;
+  }
+
+  &.github {
+    background-image: url('./../../../assets/icons/github.svg');
+  }
+
+  &.telegram {
+    background-image: url('./../../../assets/icons/telegram.svg');
+  }
 }
