@@ -1,9 +1,10 @@
 import { PropsWithChildren, ComponentPropsWithRef } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { IconsVariants } from '../Icon';
 
 interface ButtonProps extends PropsWithChildren<ComponentPropsWithRef<'button'>> {
   className?: string;
-  icon?: React.ReactNode;
+  icon?: IconsVariants;
 }
 
 const Button: React.FC<ButtonProps> = ({ className, children, icon, ...props }) => (

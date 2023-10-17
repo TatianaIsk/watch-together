@@ -1,0 +1,23 @@
+.icon {
+	width: 40px;
+  height: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+	&.film {
+		background-image: url('./../../../assets/icons/film.svg');
+	}
+
+	&.youtube {
+		background-image: url('./../../../assets/icons/youtube.svg');
+	}
+
+	&.notebook {
+		background-image: url('./../../../assets/icons/notebook.svg');
+	}
+
+	&.cateye {
+		background-image: url('./../../../assets/icons/icon-button.svg');
+	}
+}

@@ -1,5 +1,7 @@
 const ContentItems = () => {
-  return <div>index</div>;
+  return <div>
+
+	</div>;
 };
 
 export default ContentItems;

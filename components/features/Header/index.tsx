@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import iconHeader from './../../../assets/icon-header.svg';
+import iconHeader from './../../../assets/icons/icon-header.svg';
 
 import Image from 'next/image';
 import Button from '@/components/ui/Button';

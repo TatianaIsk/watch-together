@@ -1,10 +1,11 @@
 import Button from '@/components/ui/Button';
 
 import image from './../../../../assets/image-pagecontent.svg';
-import icon from './../../../../assets/icon-button.svg';
+import icon from './../../../../assets/icons/icon-button.svg';
 import imageItem from './../../../../assets/image-items.png';
 
 import Image from 'next/image';
+import Icon from '@/components/ui/Icon';
 
 const PageContent = () => {
   return (
@@ -17,7 +18,7 @@ const PageContent = () => {
           </h1>
           <Button className='w-[275px] flex bg-gradient-to-r from-[#E0E29E] to-[#ECBC87] text-[#281759] mt-7 items-center justify-between px-4 py-2'>
             Смотреть вместе
-            <Image alt='icon' src={icon} />
+            <Icon name='cateye' />
           </Button>
         </div>
         <div className='sm:w-1/2 lg:w-full'>
@@ -28,9 +29,7 @@ const PageContent = () => {
         <div className='ml-[150px]'>
           <Image alt='image' src={imageItem} className=' h-auto' />
         </div>
-        <div className='flex'>
-          
-        </div>
+        <div className='flex'></div>
       </div>
     </>
   );
