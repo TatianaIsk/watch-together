@@ -1,4 +1,5 @@
 import './globals.css';
+import './../db/firebase';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import { Provider } from 'react-redux';
