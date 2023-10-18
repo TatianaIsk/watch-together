@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
     "clsx": "^2.0.0",
+    "firebase": "^10.5.0",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-spring": "^9.7.3",
     "sass": "^1.69.3",
     "tailwind-merge": "^1.14.0"
   },
