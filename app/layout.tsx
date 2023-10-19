@@ -1,15 +1,12 @@
+'use client';
+
 import './globals.css';
-import './../db/firebase';
-import type { Metadata } from 'next';
+import '../firebase/firebase';
 import { Montserrat } from 'next/font/google';
 import { Provider } from 'react-redux';
 import { store } from '@/store';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'watchTogether',
-};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

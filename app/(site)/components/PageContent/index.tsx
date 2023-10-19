@@ -1,10 +1,9 @@
-import Button from '@/components/ui/Button';
+import Image from 'next/image';
 
 import image from './../../../../assets/image-pagecontent.svg';
-import icon from './../../../../assets/icons/icon-button.svg';
 import imageItem from './../../../../assets/image-items.png';
 
-import Image from 'next/image';
+import Button from '@/components/ui/Button';
 import Icon from '@/components/ui/Icon';
 import ContentItems from '../ContentItems';
 
