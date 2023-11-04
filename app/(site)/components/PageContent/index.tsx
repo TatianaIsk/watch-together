@@ -21,12 +21,12 @@ const PageContent = () => {
           </Button>
         </div>
         <div className='sm:w-1/2 lg:w-full'>
-          <Image alt='image' src={image} className='w-full h-auto' />
+          <Image alt='image' src={image} className='w-full h-auto' sizes="(max-width: 768px) 100vw"/>
         </div>
       </div>
       <div className='grid grid-cols-2 items-center pr-[80px] pl-8 pb-6'>
         <div className='ml-[150px]'>
-          <Image alt='image' src={imageItem} className=' h-auto' />
+          <Image alt='image' src={imageItem} className=' h-auto' sizes="(max-width: 768px) 100vw"/>
         </div>
         <div className='flex flex-col'>
           <ContentItems />

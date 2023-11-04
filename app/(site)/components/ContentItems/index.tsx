@@ -1,6 +1,12 @@
+import { IconsVariants } from '@/components/ui/Icon';
 import Items from './Items';
 
-const items = [
+export type ItemType = {
+  icon: IconsVariants;
+  text: string;
+};
+
+const items: ItemType[] = [
   {
     icon: 'film',
     text: 'Смотрите фильмы и сериалы вместе на расстоянии',
@@ -15,8 +21,6 @@ const items = [
   },
 ];
 
-const ContentItems = () => {
-  return items.map(item => <Items key={item.icon} {...item} />);
-};
+const ContentItems = () => items.map(item => <Items key={item.icon} {...item} />);
 
 export default ContentItems;

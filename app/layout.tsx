@@ -5,10 +5,13 @@ import '../firebase/firebase';
 import { Montserrat } from 'next/font/google';
 import { Provider } from 'react-redux';
 import { store } from '@/store';
+import { PropsWithChildren } from 'react';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+interface RootLayoutProps extends PropsWithChildren {}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <Provider store={store}>
       <html lang='ru'>
@@ -16,4 +19,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </html>
     </Provider>
   );
-}
+};
+
+export default RootLayout;
