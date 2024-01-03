@@ -71,7 +71,7 @@ const Register = () => {
   };
 
   return (
-    <div className='bg-$color-purple h-full w-full overflow-hidden overflow-y-auto'>
+    <div className='bg-[#281759] h-full w-full overflow-hidden overflow-y-auto'>
       <Header />
       <div className='flex justify-center'>
         <Form title='Зарегистрироваться'>

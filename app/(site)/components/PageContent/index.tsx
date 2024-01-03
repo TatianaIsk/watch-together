@@ -1,3 +1,7 @@
+'use client';
+
+import { useRouter } from 'next/navigation';
+
 import Image from 'next/image';
 
 import image from './../../../../assets/image-pagecontent.svg';
@@ -8,6 +12,20 @@ import Icon from '@/components/ui/Icon';
 import ContentItems from '../ContentItems';
 
 const PageContent = () => {
+  const router = useRouter();
+
+  const generateRandomRoomNumber = (): string => {
+    const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    const roomNumberLength = 6;
+
+    return Array.from({ length: roomNumberLength }, () => characters[Math.floor(Math.random() * characters.length)]).join('');
+  };
+
+  const handleClick = () => {
+    const roomId = generateRandomRoomNumber();
+    router.push(`/room/${roomId}`);
+  };
+
   return (
     <>
       <div className='grid grid-cols-2 pt-10 pl-8 pr-8'>
@@ -15,18 +33,18 @@ const PageContent = () => {
           <h1 className='text-white font-montserrat text-5xl font-normal leading-[70px] tracking-wider'>
             Смотрите видео с<br /> друзьями и близкими на расстоянии
           </h1>
-          <Button className='w-[275px] flex bg-gradient-to-r from-[#E0E29E] to-[#ECBC87] text-[#281759] mt-7 items-center justify-between px-4 py-2'>
+          <Button onClick={handleClick} className='w-[275px] flex bg-gradient-to-r from-[#E0E29E] to-[#ECBC87] text-[#281759] mt-7 items-center justify-between px-4 py-2'>
             Смотреть вместе
             <Icon name='cateye' />
           </Button>
         </div>
         <div className='sm:w-1/2 lg:w-full'>
-          <Image alt='image' src={image} className='w-full h-auto' sizes="(max-width: 768px) 100vw"/>
+          <Image alt='image' src={image} className='w-full h-auto' sizes='(max-width: 768px) 100vw' />
         </div>
       </div>
       <div className='grid grid-cols-2 items-center pr-[80px] pl-8 pb-6'>
         <div className='ml-[150px]'>
-          <Image alt='image' src={imageItem} className=' h-auto' sizes="(max-width: 768px) 100vw"/>
+          <Image alt='image' src={imageItem} className=' h-auto' sizes='(max-width: 768px) 100vw' />
         </div>
         <div className='flex flex-col'>
           <ContentItems />
