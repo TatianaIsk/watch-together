@@ -1,6 +1,8 @@
 'use client';
-
+import { useRef } from 'react';
 import { useRouter } from 'next/navigation';
+
+import { motion, useInView } from 'framer-motion';
 
 import Image from 'next/image';
 
@@ -12,7 +14,10 @@ import Icon from '@/components/ui/Icon';
 import ContentItems from '../ContentItems';
 
 const PageContent = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref);
   const router = useRouter();
+  const constraintsRef = useRef(null);
 
   const generateRandomRoomNumber = (): string => {
     const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -38,18 +43,18 @@ const PageContent = () => {
             <Icon name='cateye' />
           </Button>
         </div>
-        <div className='sm:w-1/2 lg:w-full'>
+        <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 5, x: 0 }} className='sm:w-1/2 lg:w-full' ref={constraintsRef} drag dragConstraints={constraintsRef}>
           <Image alt='image' src={image} className='w-full h-auto' sizes='(max-width: 768px) 100vw' />
-        </div>
+        </motion.div>
       </div>
-      <div className='grid grid-cols-2 items-center pr-[80px] pl-8 pb-6'>
+      <motion.div className='grid grid-cols-2 items-center pr-[80px] pl-8 pb-6'  initial='hidden' animate={inView ? 'visible' : 'hidden'} ref={ref}>
         <div className='ml-[150px]'>
           <Image alt='image' src={imageItem} className=' h-auto' sizes='(max-width: 768px) 100vw' />
         </div>
         <div className='flex flex-col'>
           <ContentItems />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

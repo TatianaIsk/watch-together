@@ -1,26 +1,21 @@
-import { IconsVariants } from '@/components/ui/Icon';
+import { motion } from 'framer-motion';
 import Items from './Items';
+import { container, item } from '@/constants/animation';
 
-export type ItemType = {
-  icon: IconsVariants;
-  text: string;
+const ContentItems = () => {
+  return (
+    <motion.div variants={container}>
+      <motion.div variants={item}>
+        <Items icon='film'>Смотрите фильмы и сериалы вместе на расстоянии</Items>
+      </motion.div>
+      <motion.div variants={item}>
+        <Items icon='youtube'>Смотрите Youtube вместе на расстоянии</Items>
+      </motion.div>
+      <motion.div variants={item}>
+        <Items icon='notebook'>Смотрите видео-файлы с вашего устройства</Items>
+      </motion.div>
+    </motion.div>
+  );
 };
-
-const items: ItemType[] = [
-  {
-    icon: 'film',
-    text: 'Смотрите фильмы и сериалы вместе на расстоянии',
-  },
-  {
-    icon: 'youtube',
-    text: 'Смотрите Youtube вместе на расстоянии',
-  },
-  {
-    icon: 'notebook',
-    text: 'Смотрите видео-файлы с вашего устройства',
-  },
-];
-
-const ContentItems = () => items.map(item => <Items key={item.icon} {...item} />);
 
 export default ContentItems;
