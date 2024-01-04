@@ -1,16 +1,14 @@
 'use client';
-import { useRouter, useParams } from 'next/navigation';
-
 import Header from '@/components/features/Header';
+import VideoForm from '../components/VideoForm';
+import Footer from '@/components/features/Footer';
 
 const Room = () => {
-  const router = useRouter();
-  const { roomId } = useParams();
-
   return (
     <div className='bg-[#281759] h-full w-full overflow-hidden overflow-y-auto'>
       <Header />
-      {roomId}
+      <VideoForm />
+      <Footer/>
     </div>
   );
 };
