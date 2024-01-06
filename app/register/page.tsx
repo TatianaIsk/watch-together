@@ -14,6 +14,8 @@ import Button from '@/components/ui/Button';
 import Form from '@/components/ui/Form';
 import Input from '@/components/ui/Input';
 
+import s from './Register.module.scss'
+
 type UserType = {
   email: string;
   password: string;
@@ -75,9 +77,9 @@ const Register = () => {
       <Header />
       <div className='flex justify-center'>
         <Form title='Зарегистрироваться'>
-          <Input placeholder='Логин' name='email' value={userInfo.email} onChange={onHandleChange} />
-          <Input placeholder='Пароль' name='password' type='password' value={userInfo.password} onChange={onHandleChange} />
-          <Input placeholder='Подтвердите пароль' name='confirmPassword' type='password' value={userInfo.confirmPassword} onChange={onHandleChange} />
+          <Input placeholder='Логин' name='email' value={userInfo.email} onChange={onHandleChange} className={s.input}/>
+          <Input placeholder='Пароль' name='password' type='password' value={userInfo.password} onChange={onHandleChange} className={s.input}/>
+          <Input placeholder='Подтвердите пароль' name='confirmPassword' type='password' value={userInfo.confirmPassword} onChange={onHandleChange} className={s.input}/>
           {error && <p className='text-red-500 mt-2'>{error}</p>}
           <div className='flex flex-col items-center'>
             <Button

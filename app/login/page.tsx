@@ -14,6 +14,8 @@ import Button from '@/components/ui/Button';
 import Form from '@/components/ui/Form';
 import Input from '@/components/ui/Input';
 
+import s from './Login.module.scss'
+
 type UserType = {
   email: string;
   password: string;
@@ -61,8 +63,8 @@ const Login = () => {
       <Header />
       <div className='flex justify-center'>
         <Form title='Войти'>
-          <Input placeholder='Логин' name='email' value={userInfo.email} onChange={onHandleChange} />
-          <Input placeholder='Пароль' name='password' type='password' value={userInfo.password} onChange={onHandleChange} />
+          <Input placeholder='Логин' name='email' value={userInfo.email} onChange={onHandleChange} className={s.input}/>
+          <Input placeholder='Пароль' name='password' type='password' value={userInfo.password} onChange={onHandleChange} className={s.input}/>
           <div className='flex flex-col items-center'>
             <Button
               className='w-[250px] rounded-[8px]  px-5 py-3 disabled:cursor-not-allowed disabled:opacity-50 font-bold hover:border-opacity-100 hover:opacity-75 transition bg-gradient-to-r from-[#E0E29E] to-[#ECBC87] text-[#0C0A22] cursor-pointer mt-9'

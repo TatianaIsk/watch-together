@@ -42,7 +42,18 @@
     background-image: url('~/assets/icons/telegram.svg');
   }
 
-  &.inputCat {
-    background-image: url('~/assets/icons/cateyes-black.svg');
+  &.cateyeBlack {
+    width: 63px;
+    height: 35px;
+    flex-shrink: 0;
+    background-image: url('~/assets/icons/cateyeBlack.svg');
   }
+
+  &.eyeclose {
+    width: 63px;
+    height: 13px;
+    flex-shrink: 0;
+    background-image: url('~/assets/icons/eyeclose.svg');
+  }
+
 }
