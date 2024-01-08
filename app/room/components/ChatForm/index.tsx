@@ -9,7 +9,7 @@ interface Message {
   sender: string;
 }
 
-const ChatForm: React.FC = () => {
+const ChatForm = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState<string>('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
