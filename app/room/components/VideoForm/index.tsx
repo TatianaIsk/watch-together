@@ -20,7 +20,7 @@ const VideoForm: React.FC<VideoFormProps> = ({ className }) => {
   };
 
   return (
-    <div className={clsx(`flex flex-row items-start justify-start py-[75px] px-[50px]`, className)}>
+    <div className={clsx(`flex flex-row items-start justify-start pt-[75px] px-[50px] pb-[57px]`, className)}>
       {videoUrl ? (
         <ReactPlayer url={videoUrl} controls width='1400px' height='380px' className='mr-4 rounded-[10px]' />
       ) : (
